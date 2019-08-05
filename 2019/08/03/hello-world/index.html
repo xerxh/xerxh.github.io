@@ -4,7 +4,7 @@
 
 
 
-<html class="theme-next pisces use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
@@ -55,17 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。 解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如: 123import ShowBlogs from &apos;@/components/ShowBlogs&apos;routes:[ path: &apos;Blogs&apos;, nam">
+<meta name="keywords" content="webpack,vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
+<meta property="og:title" content="vue首页加载白屏优化">
 <meta property="og:url" content="http://yoursite.com/2019/08/03/hello-world/index.html">
 <meta property="og:site_name" content="时光成长日记">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-03T14:51:49.745Z">
+<meta property="og:description" content="首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。 解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如: 123import ShowBlogs from &apos;@/components/ShowBlogs&apos;routes:[ path: &apos;Blogs&apos;, nam">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-04T11:38:03.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="vue首页加载白屏优化">
+<meta name="twitter:description" content="首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。 解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如: 123import ShowBlogs from &apos;@/components/ShowBlogs&apos;routes:[ path: &apos;Blogs&apos;, nam">
   <link rel="canonical" href="http://yoursite.com/2019/08/03/hello-world/">
 
 
@@ -80,7 +81,7 @@
   };
 </script>
 
-  <title>Hello World | 时光成长日记</title>
+  <title>vue首页加载白屏优化 | 时光成长日记</title>
   
 
 
@@ -117,7 +118,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <div class="container sidebar-position-left">
     <div class="headband"></div>
@@ -271,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">vue首页加载白屏优化
 
               
             
@@ -294,6 +295,35 @@
               <time title="Created: 2019-08-03 22:51:49" itemprop="dateCreated datePublished" datetime="2019-08-03T22:51:49+08:00">2019-08-03</time>
             </span>
           
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-04 19:38:03" itemprop="dateModified" datetime="2019-08-04T19:38:03+08:00">2019-08-04</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           <br>
 
@@ -306,20 +336,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="首页白屏的原因"><a href="#首页白屏的原因" class="headerlink" title="首页白屏的原因"></a>首页白屏的原因</h2><p>单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。</p>
+<h2 id="解决优化方案"><a href="#解决优化方案" class="headerlink" title="解决优化方案"></a>解决优化方案</h2><h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><p>在 router.js 的文件中,原来的静态引用方式,如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import ShowBlogs from <span class="string">'@/components/ShowBlogs'</span></span><br><span class="line"></span><br><span class="line">routes:[ path: <span class="string">'Blogs'</span>, name: <span class="string">'ShowBlogs'</span>, component: ShowBlogs ]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">routes:[ </span><br><span class="line">    path: <span class="string">'Blogs'</span>,</span><br><span class="line">    name: <span class="string">'ShowBlogs'</span>,</span><br><span class="line">    component: () =&gt; import(<span class="string">'./components/ShowBlogs.vue'</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="将-JS-文件放在-body-的后面"><a href="#将-JS-文件放在-body-的后面" class="headerlink" title="将 JS 文件放在 body 的后面"></a>将 JS 文件放在 body 的后面</h3><p>默认情况下, build 打包后的 index.html, js 的引入是在 head 中,使用html-webpack-plugin插件，将inject的值改为body。就可以将js引入放到body最后。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var HtmlWebpackPlugin = require(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line">new HtmlWebpackPlugin(&#123;</span><br><span class="line">    inject:<span class="string">'body'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="使用-CDN"><a href="#使用-CDN" class="headerlink" title="使用 CDN"></a>使用 CDN</h3><p>打包时，把vue、vuex、vue-router、axios等，换用国内的bootcdn直接引入到根目录的index.html。<br>在webpack设置中添加externals，忽略不需要打包的库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  context: path.resolve(__dirname, <span class="string">'../'</span>),</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: <span class="string">'./src/main.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  externals:&#123;</span><br><span class="line">    <span class="string">'vue'</span>:<span class="string">'Vue'</span>,</span><br><span class="line">    <span class="string">'vue-router'</span>:<span class="string">'VueRouter'</span>,</span><br><span class="line">    <span class="string">'vuex'</span>:<span class="string">'Vuex'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  // 格式为<span class="string">'aaa'</span>:<span class="string">'bbb'</span>，其中，aaa表示要引入的资源的名字，bbb表示该模块提供给外部引用的名字，由对应的库自定。例如，vue为Vue，vue-router为VueRouter</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>在 index.html 中判断是否是生产环境使用 CDN 引入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (NODE_ENV === <span class="string">'production'</span>) &#123; %&gt;</span><br><span class="line">    &lt;script src=<span class="string">"//cdn.bootcss.com/vue/2.2.5/vue.min.js"</span>&gt;&lt;/script&gt;  </span><br><span class="line">    &lt;script src=<span class="string">"//cdn.bootcss.com/vue-router/2.3.0/vue-router.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"//cdn.bootcss.com/vuex/2.2.1/vuex.min.js"</span>&gt;&lt;/script&gt;  </span><br><span class="line">    &lt;script src=<span class="string">"//cdn.bootcss.com/axios/0.15.3/axios.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
+<p>去掉原有的引用,否则还是会打包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//去掉import，如：</span><br><span class="line">//import Vue from &apos;vue&apos;</span><br><span class="line">//import Router from &apos;vue-router&apos;</span><br><span class="line"></span><br><span class="line">//去掉Vue.use(XXX)，如：</span><br><span class="line">//Vue.use(Router)</span><br></pre></td></tr></table></figure>
+
+<h3 id="压缩代码-移除-console"><a href="#压缩代码-移除-console" class="headerlink" title="压缩代码,移除 console"></a>压缩代码,移除 console</h3><p>使用UglifyJsPlugin插件来压缩代码和移除console</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">new UglifyJsPlugin(&#123;</span><br><span class="line">      uglifyOptions: &#123;</span><br><span class="line">        compress: &#123;</span><br><span class="line">          warnings: false,</span><br><span class="line">          drop_console:true,</span><br><span class="line">          pure_funcs:[&apos;console.log&apos;]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      sourceMap: config.build.productionSourceMap,</span><br><span class="line">      parallel: true</span><br><span class="line">    &#125;),</span><br></pre></td></tr></table></figure>
+
+<h3 id="gzip压缩"><a href="#gzip压缩" class="headerlink" title="gzip压缩"></a>gzip压缩</h3><p>参数配置文档: <a href="https://www.webpackjs.com/plugins/compression-webpack-plugin/" target="_blank" rel="noopener">https://www.webpackjs.com/plugins/compression-webpack-plugin</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 需要 npm install compression-webpack-plugin --save-dev</span><br><span class="line">const CompressionWebpackPlugin = require(<span class="string">'compression-webpack-plugin'</span>)</span><br><span class="line"></span><br><span class="line">// 定义当前环境</span><br><span class="line">const ENV = process.env.NODE_ENV || <span class="string">'development'</span></span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">	configureWebpack: config =&gt; &#123;</span><br><span class="line">		// 如果是开发环境的话，开启压缩</span><br><span class="line">		<span class="keyword">if</span> (ENV === <span class="string">'production'</span>) &#123;</span><br><span class="line">			config.plugins.push(new CompressionWebpackPlugin(&#123;</span><br><span class="line">				algorithm: <span class="string">'gzip'</span>,</span><br><span class="line">				<span class="built_in">test</span>: /\.(js|css|html)$/, </span><br><span class="line">				threshold: 10240, //对超过10k的数据进行压缩</span><br><span class="line">				minRatio: 0.8</span><br><span class="line">			&#125;))</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码分割-Code-Splitting"><a href="#代码分割-Code-Splitting" class="headerlink" title="代码分割 Code Splitting"></a>代码分割 Code Splitting</h3><p>参数配置文档: <a href="https://webpack.js.org/guides/code-splitting" target="_blank" rel="noopener">https://webpack.js.org/guides/code-splitting</a></p>
+<ul>
+<li>分割业务代码和库代码, 不然打包文件会很大, 首次访问加载时间会很长</li>
+<li>而且如果不分割, 修改业务代码后, 重新访问, 又全部得重新加载库代码</li>
+<li>分割方式: 配置 + 同步引入 与 动态引入(无需做任何配置)</li>
+</ul>
+<p>动态引入文档: <a href="https://webpack.js.org/guides/code-splitting#dynamic-imports" target="_blank" rel="noopener">https://webpack.js.org/guides/code-splitting#dynamic-imports</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getComponent</span></span> () &#123;</span><br><span class="line">  // jsonp引入</span><br><span class="line">  // 动态的import, 实验性的语法</span><br><span class="line">  // npm i babel-plugin-dynamic-import-webpack -D</span><br><span class="line">  <span class="built_in">return</span> import(<span class="string">'lodash'</span>).<span class="keyword">then</span>((&#123; default: _ &#125;) =&gt; &#123;</span><br><span class="line">    var element = document.createElement(<span class="string">'div'</span>)</span><br><span class="line">    element.innerHTML = _.join([<span class="string">'a'</span>, <span class="string">'b'</span>], <span class="string">'*'</span>)</span><br><span class="line">    <span class="built_in">return</span> element</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getComponent().<span class="keyword">then</span>(element =&gt; &#123;</span><br><span class="line">  document.body.appendChild(element)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// .babelrc 动态引入</span><br><span class="line">// npm i -D babel-plugin-dynamic-import-webpack</span><br><span class="line">&#123;</span><br><span class="line">  plugins: [<span class="string">'dynamic-import-webpack'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>SplitChunksPlugin官方文档: <a href="https://webpack.js.org/plugins/split-chunks-plugin/" target="_blank" rel="noopener">https://webpack.js.org/plugins/split-chunks-plugin/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">//  splitPlugin 配置</span><br><span class="line">optimization: &#123;</span><br><span class="line">    // SplitChunksPlugin config</span><br><span class="line">    // 如下是官方默认配置</span><br><span class="line">    splitChunks: &#123;</span><br><span class="line">      // async 只对异步代码生效</span><br><span class="line">      // all 对同步异步都做代码分割, 但是同步代码还需cacheGrops配置</span><br><span class="line">      // initial 只对同步代码做分割</span><br><span class="line">      chunks: <span class="string">'async'</span>,</span><br><span class="line">      // 如果引入的模块大于minSize才做代码分割</span><br><span class="line">      minSize: 30000,</span><br><span class="line">      // 对于大于maxsize的模块尝试进行二次代码分割</span><br><span class="line">      maxSize: 0,</span><br><span class="line">      // 打包后的文件至少有多少个chunk文件引入这个模块才进行代码分割</span><br><span class="line">      minChunks: 1,</span><br><span class="line">      // 同时加载的模块数量, </span><br><span class="line">      // 在打包前5个库的时候会生成5个js文件,</span><br><span class="line">      // 超过5个就不再做代码分割</span><br><span class="line">      maxAsyncRequests: 5,</span><br><span class="line">      // 入口文件做代码分割的最大文件数量</span><br><span class="line">      maxInitialRequests: 3,</span><br><span class="line">      // 自动命名定界符</span><br><span class="line">      automaticNameDelimiter: <span class="string">'~'</span>,</span><br><span class="line">      // 让cacheGroups里的filename生效</span><br><span class="line">      name: <span class="literal">true</span>,</span><br><span class="line">      // 缓存组, 把库文件先放到缓存里, 再根据<span class="built_in">test</span>规则分组合并打包</span><br><span class="line">      cacheGroups: &#123;</span><br><span class="line">        // vendors: <span class="literal">false</span></span><br><span class="line">        vendors: &#123;</span><br><span class="line">          // 如果是node_modules里面的文件, 就打包到vendors组里</span><br><span class="line">          <span class="built_in">test</span>: /[\\/]node_modules[\\/]/,</span><br><span class="line">          // 分组时的优先级</span><br><span class="line">          priority: -10</span><br><span class="line">          // // 组文件的名字 vendors.js, 不然会是 vendors~main.js</span><br><span class="line">          // filename: <span class="string">'vendors.js'</span> </span><br><span class="line">        &#125;,</span><br><span class="line">        // 被分割的代码的默认的配置, 没有<span class="built_in">test</span>, 所有模块都符合要求</span><br><span class="line">        default: &#123;</span><br><span class="line">          // 至少被引用了2次</span><br><span class="line">          minChunks: 2,</span><br><span class="line">          priority: -20,</span><br><span class="line">          // 复用已被分割打包过了的模块</span><br><span class="line">          reuseExistingChunk: <span class="literal">true</span>,</span><br><span class="line">          // // 组的文件名</span><br><span class="line">          // filename: <span class="string">'common.js'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="tree-shaking-根据引入的按需打包-摇晃掉模块里与树没有关联的无用的模块"><a href="#tree-shaking-根据引入的按需打包-摇晃掉模块里与树没有关联的无用的模块" class="headerlink" title="tree shaking 根据引入的按需打包, 摇晃掉模块里与树没有关联的无用的模块"></a>tree shaking 根据引入的按需打包, 摇晃掉模块里与树没有关联的无用的模块</h3><p>官方文档: <a href="https://webpack.js.org/guides/tree-shaking" target="_blank" rel="noopener">https://webpack.js.org/guides/tree-shaking</a></p>
+<p>官方文档: <a href="https://webpack.js.org/configuration/optimization#optimizationusedexports" target="_blank" rel="noopener">https://webpack.js.org/configuration/optimization#optimizationusedexports</a></p>
+<p>关于静态模块结构的官方文档: <a href="https://exploringjs.com/es6/ch_modules.html#static-module-structure" target="_blank" rel="noopener"> https://exploringjs.com/es6/ch_modules.html#static-module-structure</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// Tree Shaking只支持 ES Module(静态引入), 不支持Common JS(动态引入)</span><br><span class="line">// development mode 默认没有tree shaking</span><br><span class="line">// production mode 不需要这个optimization</span><br><span class="line">optimization: &#123;</span><br><span class="line">  usedExports: <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// package.json</span><br><span class="line"><span class="string">"sideEffects"</span>: <span class="literal">false</span>, // <span class="literal">false</span>时对所有模块摇树</span><br><span class="line">// 实践</span><br><span class="line"><span class="string">"sideEffects"</span>: [</span><br><span class="line">  // 不然打包时会忽略 @babel/polly-fill, 因为其没有导出对象, 只在window上挂载了对象</span><br><span class="line">  <span class="string">"@babel/polly-fill"</span>,</span><br><span class="line">  // 对css不摇树</span><br><span class="line">  <span class="string">"*.css"</span></span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<h3 id="sourcemap-源码映射"><a href="#sourcemap-源码映射" class="headerlink" title="sourcemap 源码映射"></a>sourcemap 源码映射</h3><p>官方文档: <a href="https://webpack.js.org/configuration/devtool#devtool" target="_blank" rel="noopener">https://webpack.js.org/configuration/devtool#devtool</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">devtool: <span class="string">'none'</span> // 关闭sourcemap</span><br><span class="line">devtool: <span class="string">'source-map'</span> // 会生成一个.map文件</span><br><span class="line">devtool: <span class="string">'inline-source-map'</span> // .map文件会被打包到js文件里, 错误提示会精确到第几行第几列</span><br><span class="line">devtool: <span class="string">'cheap-inline-source-map'</span> // 只精确到行, 不精确到列, 提示性能, 而且只会提示业务代码的错误, 不提示loader和第三方模块的错误</span><br><span class="line">devtool: <span class="string">'cheap-module-inline-source-map'</span> // 提示loader和第三方模块的错误</span><br><span class="line">devtool: <span class="string">'eval'</span> // 用js <span class="built_in">eval</span>效率最高, 提示不全面, 不展示行数</span><br><span class="line">devtool: <span class="string">'cheap-module-eval-source-map'</span> // 开发时的最佳实践</span><br><span class="line">devtool: <span class="string">'cheap-module-source-map'</span> // 生产时的最佳实践</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h3>
     </div>
 
     
@@ -327,6 +389,14 @@
     
 
     <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+        </div>
     </footer>
   </div>
   
@@ -384,6 +454,38 @@
         </a>
       </div>
     
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
   </nav>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
@@ -424,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首页白屏的原因"><span class="nav-number">1.</span> <span class="nav-text">首页白屏的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决优化方案"><span class="nav-number">2.</span> <span class="nav-text">解决优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由懒加载"><span class="nav-number">2.1.</span> <span class="nav-text">路由懒加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将-JS-文件放在-body-的后面"><span class="nav-number">2.2.</span> <span class="nav-text">将 JS 文件放在 body 的后面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-CDN"><span class="nav-number">2.3.</span> <span class="nav-text">使用 CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩代码-移除-console"><span class="nav-number">2.4.</span> <span class="nav-text">压缩代码,移除 console</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gzip压缩"><span class="nav-number">2.5.</span> <span class="nav-text">gzip压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码分割-Code-Splitting"><span class="nav-number">2.6.</span> <span class="nav-text">代码分割 Code Splitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tree-shaking-根据引入的按需打包-摇晃掉模块里与树没有关联的无用的模块"><span class="nav-number">2.7.</span> <span class="nav-text">tree shaking 根据引入的按需打包, 摇晃掉模块里与树没有关联的无用的模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sourcemap-源码映射"><span class="nav-number">2.8.</span> <span class="nav-text">sourcemap 源码映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSR"><span class="nav-number">2.9.</span> <span class="nav-text">SSR</span></a></li></ol></li></ol></div>
             
 
           </div>

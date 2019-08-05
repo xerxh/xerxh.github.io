@@ -4,7 +4,7 @@
 
 
 
-<html class="theme-next pisces use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
@@ -59,7 +59,7 @@
 <meta property="og:title" content="时光成长日记">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="时光成长日记">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时光成长日记">
   <link rel="canonical" href="http://yoursite.com/">
@@ -113,7 +113,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <div class="container sidebar-position-left">
     <div class="headband"></div>
@@ -269,7 +269,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/03/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+                <a href="/2019/08/03/hello-world/" class="post-title-link" itemprop="url">vue首页加载白屏优化</a>
               
             
           </h1>
@@ -291,6 +291,35 @@
               <time title="Created: 2019-08-03 22:51:49" itemprop="dateCreated datePublished" datetime="2019-08-03T22:51:49+08:00">2019-08-03</time>
             </span>
           
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-04 19:38:03" itemprop="dateModified" datetime="2019-08-04T19:38:03+08:00">2019-08-04</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           <br>
 
@@ -305,7 +334,9 @@
       
           
             <p>
-              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+              首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。
+解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如:
+import ShowBlogs from '@/c
               ...
             </p>
           <!--noindex-->
@@ -374,6 +405,38 @@
         
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
         </a>
       </div>
     
