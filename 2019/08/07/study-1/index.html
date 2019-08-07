@@ -55,28 +55,33 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="时光成长日记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="什么叫跨域？跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。 所以我们需要了解一下什么叫同源策略？同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所有支">
+<meta name="keywords" content="跨域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端跨域方法总结">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/study-1/index.html">
 <meta property="og:site_name" content="时光成长日记">
+<meta property="og:description" content="什么叫跨域？跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。 所以我们需要了解一下什么叫同源策略？同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所有支">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-07T14:56:47.238Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光成长日记">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="前后端跨域方法总结">
+<meta name="twitter:description" content="什么叫跨域？跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。 所以我们需要了解一下什么叫同源策略？同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所有支">
+  <link rel="canonical" href="http://yoursite.com/2019/08/07/study-1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>时光成长日记</title>
+  <title>前后端跨域方法总结 | 时光成长日记</title>
   
 
 
@@ -242,10 +247,11 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -266,10 +272,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/07/study-1/" class="post-title-link" itemprop="url">前后端跨域方法总结</a>
+          <h1 class="post-title" itemprop="name headline">前后端跨域方法总结
+
               
             
           </h1>
@@ -317,23 +321,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <p>
-              什么叫跨域？跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。
-所以我们需要了解一下什么叫同源策略？同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/07/study-1/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+        <h2 id="什么叫跨域？"><a href="#什么叫跨域？" class="headerlink" title="什么叫跨域？"></a>什么叫跨域？</h2><p>跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。</p>
+<h4 id="所以我们需要了解一下什么叫同源策略？"><a href="#所以我们需要了解一下什么叫同源策略？" class="headerlink" title="所以我们需要了解一下什么叫同源策略？"></a>所以我们需要了解一下什么叫同源策略？</h4><p>同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所有支持 JavaScript 的浏览器都会使用这个策略。当页面在执行一个脚本时会检查访问的资源是否同源，如果非同源，那么在请求数据时，浏览器会在控制台中报一个异常，提示拒绝访问。</p>
+<h4 id="那么浏览器是出于什么安全性考虑呢？"><a href="#那么浏览器是出于什么安全性考虑呢？" class="headerlink" title="那么浏览器是出于什么安全性考虑呢？"></a>那么浏览器是出于什么安全性考虑呢？</h4><p>最初，它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源”。</p>
+<p>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？</p>
+<ul>
+<li>如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。</li>
+<li>Cookie 现在在浏览器往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。</li>
+<li>因此”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</li>
+</ul>
+<p>然后再设想如果没有限制不同域 dom 元素的访问，会发生什么？</p>
+<ul>
+<li><p>有一天你收到一封邮件，说是你的银行账号有风险，赶紧点进<a href="http://www.yinghang.com改密码。你吓尿了，赶紧点进去，还是熟悉的银行登录界面，你果断输入你的账号密码，登录进去看看钱有没有少了" target="_blank" rel="noopener">www.yinghang.com改密码。你吓尿了，赶紧点进去，还是熟悉的银行登录界面，你果断输入你的账号密码，登录进去看看钱有没有少了</a></p>
+</li>
+<li><p>急躁的你没看清楚，平时访问的银行网站是<a href="http://www.yinhang.com，而现在访问的是www.yinghang.com，那么这个钓鱼网站会做什么呢？" target="_blank" rel="noopener">www.yinhang.com，而现在访问的是www.yinghang.com，那么这个钓鱼网站会做什么呢？</a></p>
+</li>
+<li><p>会利用 iframe 将银行页面嵌入钓鱼网站 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe name=&quot;yinhang&quot; src=&quot;www.yinhang.com&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后利用 JS </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const iframe = window.frames[&apos;yinhang&apos;] </span><br><span class="line">const node = iframe.document.getElementById(&apos;你输入账号密码的Input&apos;)</span><br><span class="line">console.log(`拿到了这个$&#123;node&#125;，好了 你的密码已经到手了`)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>因此同源策略的重要性不言而喻，同时随着互联网的发展和进步，为了更进一步的安全性考虑，同源策略变得原来越严格而完善。目前主要有以下三种行为受到限制。</p>
+<ul>
+<li>Cookie、LocalStorage 和 IndexDB 无法读取。</li>
+<li>DOM 无法获得</li>
+<li>AJAX 请求不能发送。</li>
+</ul>
+<h4 id="那么什么样的是同源呢？"><a href="#那么什么样的是同源呢？" class="headerlink" title="那么什么样的是同源呢？"></a>那么什么样的是同源呢？</h4><ul>
+<li>同协议：都是 http / https</li>
+<li>同域名：如都是 <a href="http://example.com/a" target="_blank" rel="noopener">http://example.com/a</a> 和 <a href="http://example.com/b" target="_blank" rel="noopener">http://example.com/b</a></li>
+<li>同端口：都是相同的端口号</li>
+<li>三者同时满足才属于同源</li>
+</ul>
+<p>不同源示例：</p>
+<ul>
+<li><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a> 和 <a href="https://example.com" target="_blank" rel="noopener">https://example.com</a> (协议不同)</li>
+<li><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a> 和 <a href="http://example.cn" target="_blank" rel="noopener">http://example.cn</a>   (域名不同)</li>
+<li><a href="http://example.com" target="_blank" rel="noopener">http://example.com</a> 和 <a href="http://example.com:8080" target="_blank" rel="noopener">http://example.com:8080</a> (端口号不同)</li>
+</ul>
+<h2 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h2><p>刚上面了解了跨域的安全性作用和必要性，但有时候由于这种安全性策略会导致很多的不方便，有些合理性的用途也会受到影响。因此我们需要对这些跨域问题进行解决达成我们的用途。</p>
+<ol>
+<li>JSONP</li>
+<li>CORS</li>
+<li>Server Proxy (服务器代理)</li>
+<li>document.domain(降域)</li>
+<li>postMessage</li>
+<li>location.hash</li>
+<li>window.name</li>
+</ol>
+
     </div>
 
     
@@ -341,128 +380,25 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xhxer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时光成长日记">
-    </span>
-      <header class="post-header">
-
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/03/hello-world/" class="post-title-link" itemprop="url">vue首页加载白屏优化</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-08-03 22:51:49" itemprop="dateCreated datePublished" datetime="2019-08-03T22:51:49+08:00">2019-08-03</time>
-            </span>
+        <div class="post-tags">
+            <a href="/tags/跨域/" rel="tag"># 跨域</a>
           
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-08-04 19:38:03" itemprop="dateModified" datetime="2019-08-04T19:38:03+08:00">2019-08-04</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>
-              首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。
-解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如:
-import ShowBlogs from '@/c
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/03/hello-world/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/08/03/hello-world/" rel="next" title="vue首页加载白屏优化">
+                <i class="fa fa-chevron-left"></i> vue首页加载白屏优化
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
-    
-    
+          <span class="post-nav-divider"></span>
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
     </footer>
   </div>
   
@@ -470,14 +406,12 @@ import ShowBlogs from '@/c
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
 
         </div>
           
@@ -492,8 +426,17 @@ import ShowBlogs from '@/c
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -577,6 +520,23 @@ import ShowBlogs from '@/c
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么叫跨域？"><span class="nav-number">1.</span> <span class="nav-text">什么叫跨域？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#所以我们需要了解一下什么叫同源策略？"><span class="nav-number">1.0.1.</span> <span class="nav-text">所以我们需要了解一下什么叫同源策略？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#那么浏览器是出于什么安全性考虑呢？"><span class="nav-number">1.0.2.</span> <span class="nav-text">那么浏览器是出于什么安全性考虑呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#那么什么样的是同源呢？"><span class="nav-number">1.0.3.</span> <span class="nav-text">那么什么样的是同源呢？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域的解决方案"><span class="nav-number">2.</span> <span class="nav-text">跨域的解决方案</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -677,5 +637,9 @@ import ShowBlogs from '@/c
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>
