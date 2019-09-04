@@ -55,28 +55,32 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="时光成长日记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="设计模式单例模式定义：单例模式的定义是保证一个类仅有一个实例。在js开发中如果我们需要点击一个登陆按钮，出现一个登陆浮窗，而这个浮窗也应该是全局唯一的。无论点击多少次，这个浮窗也只会创建一次。这时候我们就需要使用单例模式进行创建。  其实要实现一个单例模式并不复杂，主要原理是通过用一个变量来标志是否已经创建过实例，如果是直接将实例返回，不是则新建一个实例并修改变量标记做好创建记录，下次获取时直接返">
+<meta property="og:type" content="article">
+<meta property="og:title" content="design-Patterns">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/design-Patterns/index.html">
 <meta property="og:site_name" content="时光成长日记">
+<meta property="og:description" content="设计模式单例模式定义：单例模式的定义是保证一个类仅有一个实例。在js开发中如果我们需要点击一个登陆按钮，出现一个登陆浮窗，而这个浮窗也应该是全局唯一的。无论点击多少次，这个浮窗也只会创建一次。这时候我们就需要使用单例模式进行创建。  其实要实现一个单例模式并不复杂，主要原理是通过用一个变量来标志是否已经创建过实例，如果是直接将实例返回，不是则新建一个实例并修改变量标记做好创建记录，下次获取时直接返">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T15:52:35.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光成长日记">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="design-Patterns">
+<meta name="twitter:description" content="设计模式单例模式定义：单例模式的定义是保证一个类仅有一个实例。在js开发中如果我们需要点击一个登陆按钮，出现一个登陆浮窗，而这个浮窗也应该是全局唯一的。无论点击多少次，这个浮窗也只会创建一次。这时候我们就需要使用单例模式进行创建。  其实要实现一个单例模式并不复杂，主要原理是通过用一个变量来标志是否已经创建过实例，如果是直接将实例返回，不是则新建一个实例并修改变量标记做好创建记录，下次获取时直接返">
+  <link rel="canonical" href="http://yoursite.com/2019/09/04/design-Patterns/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>时光成长日记</title>
+  <title>design-Patterns | 时光成长日记</title>
   
 
 
@@ -242,10 +246,11 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -266,10 +271,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/09/04/design-Patterns/" class="post-title-link" itemprop="url">design-Patterns</a>
+          <h1 class="post-title" itemprop="name headline">design-Patterns
+
               
             
           </h1>
@@ -317,24 +320,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <p>
-              设计模式单例模式定义：单例模式的定义是保证一个类仅有一个实例。在js开发中如果我们需要点击一个登陆按钮，出现一个登陆浮窗，而这个浮窗也应该是全局唯一的。无论点击多少次，这个浮窗也只会创建一次。这时候我们就需要使用单例模式进行创建。
+        <h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>定义：单例模式的定义是保证一个类仅有一个实例。在js开发中如果我们需要点击一个登陆按钮，出现一个登陆浮窗，而这个浮窗也应该是全局唯一的。无论点击多少次，这个浮窗也只会创建一次。这时候我们就需要使用单例模式进行创建。</p>
+<ul>
+<li>其实要实现一个单例模式并不复杂，主要原理是通过用一个变量来标志是否已经创建过实例，如果是直接将实例返回，不是则新建一个实例并修改变量标记做好创建记录，下次获取时直接返回实例。</li>
+</ul>
+<p>光说好像不太能理解那么下面让我们来实现一个最简单的单例模式把。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 实现js一个登陆类</span><br><span class="line">var Singleton = function(name)&#123;</span><br><span class="line">    this.name = &apos;sing class&apos;</span><br><span class="line">    this.instance = null; // 是否实例的标记</span><br><span class="line">&#125;</span><br><span class="line">Singleton.prototype.getName = function()&#123;</span><br><span class="line">    alert(this.name)</span><br><span class="line">&#125;</span><br><span class="line">// 为类向外提供一个获取单例的方法</span><br><span class="line">Singleton.getInstance = function()&#123;</span><br><span class="line">    // 通过判断标记变量是否已经有实例 如果有 直接返回实例 如果没有生成一个新的实例返回并保存实例</span><br><span class="line">    if(!this.instance)&#123;</span><br><span class="line">        this.instance = new Singleton()</span><br><span class="line">    &#125;</span><br><span class="line">    return this.istance</span><br><span class="line">&#125;</span><br><span class="line">var aSing = Singleton.getInstance()</span><br><span class="line">var bSing = Singleton.getInstance()</span><br><span class="line">console.log(aSing === bSing)  // true 两者完全相等是同一个实例</span><br></pre></td></tr></table></figure>
 
-其实要实现一个单例模式并不复杂，主要原理是通过用一个变量来标志是否
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/09/04/design-Patterns/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+<p>好了我们已经完成了一个简单的单例了，感觉是不是很简单呢,但在实际开发中我们这种简单的单例并不具备太多的可用性，因为Singleton的使用者必须知道这是一个单例类，而且与通过 new 获取类的实例化不同,这里需要用方法进行获取。因此我们需要一步步进行深入完成更好的单例模式。</p>
+<ol>
+<li>透明的单例模式<br>目标：实现一个”透明”的单例类,我们在从这个类中创建对象时,可以像使用其他类一样使用 new 进行实例化,从而改进了上面的缺点,将单例进行隐藏了,所以叫透明的单例模式</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 现在我们将实现一个createDiv类 它的作用是负责在页面中创建唯一的div节点</span><br><span class="line">// 可实际应用在全局提示 获取 全局弹窗等地方</span><br><span class="line">var CreateDiv = (function()&#123;</span><br><span class="line">    var instance</span><br><span class="line">    var CreateDiv = function(html)&#123;</span><br><span class="line">        if(instance)&#123;</span><br><span class="line">            return instance</span><br><span class="line">        &#125;</span><br><span class="line">        this.html = html</span><br><span class="line">        this.init()</span><br><span class="line">        return instance = this</span><br><span class="line">    &#125;</span><br><span class="line">    CreateDiv.prototype.init = function()&#123;</span><br><span class="line">        var div = document.createElement(&apos;div)</span><br><span class="line">        div.html = this.html</span><br><span class="line">        document.body.appendChild(&apos;div&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">    return CreateDiv</span><br><span class="line">&#125;)()</span><br><span class="line">var a = new CreateDiv()</span><br><span class="line">var b = new CreateDiv()</span><br><span class="line">console.log(a === b) // true</span><br></pre></td></tr></table></figure>
+
+<p>好了 我们现在完成了透明单例的实现，但是它还是有很多的缺点。</p>
+<ol>
+<li>为了把单例封装隐藏起来，我们使用了自执行的匿名函数和闭包，并且让匿名函数返回真正的单例构造方法，增加了一定的代码复杂度，而且阅读也不是很好理解。</li>
+<li>我们观察我们现在的实例构造函数,在函数中实际我们完成了两件事,第一件事是创建和执行初始化init方法，第二是保证只有一个对象。但设计模式中都需要遵循”单一职责原则”即一个函数只干一件事,保证尽量精简。</li>
+<li>单一原则主要是为了未来的可扩展和可维护性，假如有一天我们需求变了需要利用这个类，在页面中创建多个div，即要让这个类可以变成同时产生多个实例的普通类，那我们就必须进行改写createDiv构造函数,把控制创建唯一对象的代码去掉这样的修改会给我们带来不必要的烦恼。</li>
+</ol>
+
     </div>
 
     
@@ -342,112 +347,19 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/07/study-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xhxer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时光成长日记">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/07/study-1/" class="post-title-link" itemprop="url">前后端跨域方法总结</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/08/07/study-1/" rel="next" title="前后端跨域方法总结">
+                <i class="fa fa-chevron-left"></i> 前后端跨域方法总结
+              </a>
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
+          <span class="post-nav-divider"></span>
 
-              
-                
-              
-
-              <time title="Created: 2019-08-07 21:20:31" itemprop="dateCreated datePublished" datetime="2019-08-07T21:20:31+08:00">2019-08-07</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-09-03 23:04:57" itemprop="dateModified" datetime="2019-09-03T23:04:57+08:00">2019-09-03</time>
-              </span>
-            
-          
-
-          <br>
-
+          <div class="post-nav-prev post-nav-item">
+          </div>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>
-              什么叫跨域？跨域，指的是从一个域名去请求另外一个域名的资源。即跨域名请求,跨域时,浏览器不能执行其他域名网站的脚本，这是由于浏览器的同源策略造成的，是浏览器施加的安全限制。
-所以我们需要了解一下什么叫同源策略？同源策略是由 Netscape(网景公司) 提出的一个著名的安全策略，浏览器出于安全方面的
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/07/study-1/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
     </footer>
   </div>
   
@@ -455,135 +367,12 @@
   
   </article>
 
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xhxer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时光成长日记">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/03/hello-world/" class="post-title-link" itemprop="url">vue首页加载白屏优化</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-08-03 22:51:49" itemprop="dateCreated datePublished" datetime="2019-08-03T22:51:49+08:00">2019-08-03</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-08-04 19:38:03" itemprop="dateModified" datetime="2019-08-04T19:38:03+08:00">2019-08-04</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>
-              首页白屏的原因单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。
-解决优化方案路由懒加载在 router.js 的文件中,原来的静态引用方式,如:
-import ShowBlogs from '@/c
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/03/hello-world/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
 
         </div>
           
@@ -598,8 +387,17 @@ import ShowBlogs from '@/c
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -683,6 +481,23 @@ import ShowBlogs from '@/c
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.1.</span> <span class="nav-text">单例模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -783,5 +598,9 @@ import ShowBlogs from '@/c
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>
