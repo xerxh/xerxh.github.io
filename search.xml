@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[webpack]]></title>
     <url>%2F2019%2F10%2F09%2Fwebpack%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[webpackvscode-webpack-debugger vscode代码调试 webpack 4.0优化 引入模块先进行解析 指定明确查找 减少查找的时间 1234567891011121314// 加在入口文件之后resolve: &#123; // 查找顺序 .js-&gt;.json-&gt;文件夹 extensions: [&apos;.js&apos;, &apos;.json&apos;], // 当加载一个模块的时候可以直接指定别名加载 alias: &#123; // 指定加载的绝对路径 react: path.resolve(&quot;./cjs/react.production.min.js&quot;) &#125;, // 查找主文件的优先顺序 如果有没有main 找 browser 没有 找node mainFields: [&apos;main&apos;, &apos;browser&apos;, &apos;node&apos;] // 当需要指定除node_modules之外的其他模块目录时 modules: [path.resolve(&apos;node_modules&apos;), path.resolve(&apos;lib&apos;)]&#125; DELL 动态链接库.dell 为后缀的文件被称为动态连接库，在一个动态链接库中可以包含给其他模块调用的函数和数据 把基础模块独立打包到动态链接库 （react,vue等） 当需要倒入的模块在动态链接库中有的时候，模块不进行再次多余打包，而是直接去动态链接库中获取 dull-plugin 定义DELL DELLPlugin插件： 用于打包出一个个动态链接库 DELLReferencePlugin: 在配置文件中1234567891011121314151617module.exports = &#123; entry: &#123; react: [&apos;react&apos;, &apos;react-dom&apos;] // 需要打包的基础模块 &#125;, output: &#123; path: path.resolve(__dirname, &apos;dist&apos;), filename: &apos;[name].dll.js&apos;, // 输出dll链接库的名字 library: &apos;_dll_[name]&apos; // 全局变量名字 其他会从此变量获取里面的模块 &#125;, plugins: [ new Webpack.DllPlugin(&#123; name: &apos;_dll_[name]&apos;, // 表示生成一个描述文件 path: path.join(__dirname, &apos;dist&apos;, &apos;manifest.json&apos;) &#125;) ]&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[design-Patterns]]></title>
